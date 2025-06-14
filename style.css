@@ -1,0 +1,215 @@
+html {
+  font-size: 70%;
+  box-sizing: border-box;
+  min-height: 100vh; /* Ensure HTML takes full viewport height */
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+body {
+  background-image: url('pic.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+.calculator {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.calculator-screen {
+  width: 100%;
+  font-size: 4rem;
+  height: 70px;
+  border: none;
+  background-color: #252525;
+  color: #fff;
+  text-align: right;
+  padding-right: 20px;
+  padding-left: 10px;
+}
+
+button {
+  height: 50px;
+  background-color: #fff;
+  border-radius: 3px;
+  border: 1px solid #c4c4c4;
+  font-size: 1.8rem;
+  color: #333;
+  background-image: linear-gradient(to bottom, transparent, transparent 50%, rgba(0, 0, 0, 0.04));
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.05),
+    inset 0 1px 0 0 rgba(255, 255, 255, 0.05),
+    inset 0 -1px 0 0 rgba(255, 255, 255, 0.05),
+    0 1px 0 0 rgba(0, 0, 0, 0.05);
+}
+
+button:hover {
+  background-color: #eaeaea;
+}
+
+.operator {
+  color: #337cac;
+}
+
+.all-clear {
+  background-color: #f05959;
+  border-color: #b03535;
+  color: #fff;
+}
+
+.all-clear:hover {
+  background-color: #f17373;
+}
+
+.equal-sign {
+  background-color: #2e86c0;
+  border-color: #337cac;
+  color: #fff;
+  height: 100%;
+  grid-area: 2 / 4 / 6 / 5;
+}
+
+.equal-sign:hover {
+  background-color: #4e9ed4;
+}
+
+.calculator-keys {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 15px;
+  padding: 15px;
+}
+
+.calculator-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+  min-height: 100vh;
+}
+
+.memory {
+  background-color: #9b59b6;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.memory:hover {
+  background-color: #8e44ad;
+}
+
+.angle-mode {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.angle-mode:hover {
+  background-color: #2980b9;
+}
+
+.advanced {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.advanced:hover {
+  background-color: #45a049;
+}
+
+.backspace {
+  background-color: #ff9800;
+  color: white;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.backspace:hover {
+  background-color: #f57c00;
+}
+
+.recent-operations {
+  background: rgba(255, 255, 255, 0.9);
+  min-width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding: 16px;
+  font-size: 1.8rem;
+  color: #333;
+  max-height: 400px;
+  overflow-y: auto;
+  margin-top: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.recent-operations h3 {
+  margin-bottom: 10px;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+#recent-operations-list {
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 700px) {
+  html {
+    font-size: 55%; /* Further reduce base font size for very small screens */
+  }
+
+  .calculator-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px; /* Reduce gap for smaller screens */
+  }
+
+  .calculator {
+    width: 90%; /* Make calculator take up more width on smaller screens */
+    position: static; /* Remove absolute positioning for mobile layout */
+    transform: none; /* Remove transform for mobile layout */
+    margin-top: 20px; /* Add some top margin when stacked */
+  }
+
+  .calculator-screen {
+    font-size: 3rem; /* Adjust font size for calculator screen */
+    height: 60px;
+  }
+
+  button {
+    font-size: 1.5rem; /* Adjust font size for buttons */
+    height: 45px;
+  }
+
+  .calculator-keys {
+    grid-gap: 10px;
+    padding: 10px;
+  }
+
+  .recent-operations {
+    margin-top: 0;
+    margin-left: 0;
+    width: 90%; /* Make recent operations take up more width */
+    min-width: unset;
+    font-size: 1.6rem;
+  }
+} 

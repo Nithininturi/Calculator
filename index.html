@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator">
+            <input type="text" class="calculator-screen" value="0" disabled />
+            <div class="calculator-keys">
+                <!-- Memory Functions -->
+                <button type="button" class="memory" value="mc">MC</button>
+                <button type="button" class="memory" value="mr">MR</button>
+                <button type="button" class="memory" value="m+">M+</button>
+                <button type="button" class="memory" value="m-">M-</button>
+
+                <!-- Angle Mode -->
+                <button type="button" class="angle-mode" value="deg">DEG</button>
+                <button type="button" class="angle-mode" value="rad">RAD</button>
+
+                <!-- Basic Operations -->
+                <button type="button" class="operator" value="+">+</button>
+                <button type="button" class="operator" value="-">-</button>
+                <button type="button" class="operator" value="*">&times;</button>
+                <button type="button" class="operator" value="/">&divide;</button>
+
+                <button type="button" value="7">7</button>
+                <button type="button" value="8">8</button>
+                <button type="button" value="9">9</button>
+
+                <button type="button" value="4">4</button>
+                <button type="button" value="5">5</button>
+                <button type="button" value="6">6</button>
+
+                <button type="button" value="1">1</button>
+                <button type="button" value="2">2</button>
+                <button type="button" value="3">3</button>
+
+                <button type="button" value="0">0</button>
+                <button type="button" class="decimal" value=".">.</button>
+                <button type="button" class="backspace" value="backspace">⌫</button>
+
+                <button type="button" class="all-clear" value="all-clear">AC</button>
+                <button type="button" class="operator" value="=">=</button>
+
+                <!-- Advanced Operations -->
+                <button type="button" class="advanced" value="sqrt">√</button>
+                <button type="button" class="advanced" value="cbrt">∛</button>
+                <button type="button" class="operator" value="nthroot">n√</button>
+                <button type="button" class="operator" value="^">x^y</button>
+                <button type="button" class="advanced" value="%">%</button>
+                <button type="button" class="advanced" value="sin">sin</button>
+                <button type="button" class="advanced" value="cos">cos</button>
+                <button type="button" class="advanced" value="tan">tan</button>
+                <button type="button" class="advanced" value="log">log</button>
+                <button type="button" class="advanced" value="ln">ln</button>
+                <button type="button" class="advanced" value="pi">π</button>
+                <button type="button" class="advanced" value="e">e</button>
+                <button type="button" class="advanced" value="fact">x!</button>
+                <button type="button" class="advanced" value="abs">|x|</button>
+            </div>
+        </div>
+        <div class="recent-operations">
+            <h3>Recent Operations</h3>
+            <div id="recent-operations-list"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html> 
