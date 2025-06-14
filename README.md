@@ -40,7 +40,8 @@ To run this project locally, follow these steps:
     cd Calculator
     ```
 3.  **Open `index.html`:** Simply open the `index.html` file in your web browser. You can typically do this by double-clicking the file. 
-                              or
+
+     or
      ```bash
     start index.html
     ```
